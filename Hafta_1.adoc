@@ -3,8 +3,131 @@ toc::[]
 
 = *FPGA TABANLI SİSTEM PROGRAMLAMA* +
 [.center]
-image::https://github.com/fatihpir/FPGA_2017/raw/master/resim1.png[Giriş,height=128,weight=256]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim1.png[Giriş,height=128,weight=256] 
+== *KAYNAKLAR* 
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim30.png[Kaynaklar,height=128,weight=256] 
+https://www.tutorialspoint.com/computer_programming/index.htm 
 
+== *Hesaplama İçin Kullanılan Donanımlar* +
+=== *CPU* +
+_Central Processing Unit_ 
 
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim2.png[Kaynaklar,height=128,weight=256] 
+=== *DSP* +
+_Digital Signal Processor_
 
-https://www.tutorialspoint.com/computer_programming/index.htm
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim3.png[Kaynaklar,height=128,weight=256] 
+
+=== *ASIC* +
+_Application Specific Integrated Circuit_
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim4.png[Kaynaklar,height=128,weight=256]
+
+=== *GPU* +
+_Graphics Processing Unit_
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim5.png[Kaynaklar,height=128,weight=256]
+
+=== *FPGA* +
+_Field Programmable Gate Array_
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim6.png[Kaynaklar,height=128,weight=256]
+== *FPGA Nedir?* +
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim7.png[Kaynaklar,height=256,weight=256]  
+== *CLB* +
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim8.png[Kaynaklar,height=128,weight=128]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim9.png[Kaynaklar,height=128,weight=128]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim10.png[Kaynaklar,height=128,weight=128]
+== *Look Up Table* +
+*(a&b)|c* değerini hesaplamak için programlanmış 3 Giriş, 1 Çıkış LUT (Look Up Table)
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim11.png[Kaynaklar,height=256,weight=256]
+== *Programlanabilir Anahtar* +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim13.png[Kaynaklar,height=256,weight=256]
+== *Programlanabilir Anahtar Kutuları* +
+*(a&b)|c* fonksiyonuna sahip LUT kullanılarak anahtar kutularının(switch boxes) bağlanması +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim14.png[Kaynaklar,height=256,weight=256]
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim15.png[Kaynaklar,height=180,weight=256]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim16.png[Kaynaklar,height=160,weight=256]
+== *FPGA* +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim17.png[Kaynaklar,height=256,weight=256]
+== *Modern FPGA Mimarisi* +
+Modern FPGA, alan programlamalı kapı dizileri olmayan bir çok donanımsal modüle sahiptir. +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim18.png[Kaynaklar,height=256,weight=256]
+== *FPGA vs (DSP, GPU, Processor)* +
+Basit işlemler için kapsamlı ALU donanımlarına gerek yoktur;
+
+* 2-bitlik bir toplayıcının büyük, "donanımsal" bir DSP dilimini kullanması gerekmemektedir.
+* Küçük bir "yazılımsal" mantık parçası içine rahatça sığdırılabilir. 
+* Çoğu işlemci ile, en basit tasarımı yapmak için bir ALU donanımının tamamını kullanmanız gerekmektedir. +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim19.png[Kaynaklar,height=256,weight=256]
+
+Basit işlemler için tam bir saat döngüsüne ihtiyaç yoktur.
+
+* Bir OR kapısındaki yayılım gecikmesi, bir saat döngüsünden oldukça küçüktür. +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim20.png[Kaynaklar,height=256,weight=256]
+
+Dağıtık işlem yapabilme;
+
+* Mikroişlemci ALU haberleşmesi saklayıcılar üzerinden yapmaktadır.
+* FPGA’lerin alanları içinde yayılan ALU’larla değişik şekilde haberleşilebilir.  
+* ALU sayısı ∝ frekans hızı +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim21.png[Kaynaklar,height=256,weight=256]
+
+Dağıtık Komut İşletimi;
+
+* FPGA, basit durum makinalarını kullanarak bir çok komut üretilebilir. +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim22.png[Kaynaklar,height=256,weight=256]
+
+* FPGA üzerinde 1D konvolüsyonun şematik uygulama örneği;
+** v: vektör
+** f: filtre
+** N : filtre katsayısı 
+
+*** f0*v[i] + f1*v[i-1] + f2*v[i-2] + … + fN-1*v[i-N-1]:
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim23.png[Kaynaklar,height=384,weight=512]
+
+[source,verilog]
+module conv8(clk, in_v, out_conv);
+ // giriş & çıkışlar
+input clk; // clock
+input [7:0] in_v; // 8-bit vektör
+output reg [18:0] out_conv; // 19-bit sonuç
+// iç saklayıcılar
+reg [7:0] f[0:7]; // 8-bit katsayılar
+reg [7:0] v[0:7]; // 8-bit vector
+reg [15:0] prod[0:7]; // 16-bit çarpım sonucu
+reg [16:0] sum0[0:3]; // 17-bit arası toplam sonucu
+reg [17:0] sum1[0:1]; // 18-bit arası toplam sonucu
+integer i; //index
+always @(posedge clk) begin //clk 0 dan 1 e geçtiğinde
+		v[0] <= in_v;
+for(i=1; i<8; i=i+1)
+v[i] <= v[i-1];
+for(i=0; i<8; i=i+1)
+prod[i] <= f[i] * v[i];
+for(i=0; i<4; i=i+1)
+sum0[i] <= prod[i*2] + prod[i*2+1];
+for(i=0; i<2; i=i+1)
+sum1[i] <= sum0[i*2] + sum0[i*2+1];
+out_conv <= sum1[0] + sum1[1];
+end
+endmodule
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim24.png[Kaynaklar,height=256,weight=512]
+== *FPGA Kullanım Alanları* +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim25.png[Kaynaklar]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim26.png[Kaynaklar]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim27.png[Kaynaklar]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim28.png[Kaynaklar]
