@@ -2,4 +2,9 @@
 toc::[]
 
 = *FPGA TABANLI SİSTEM PROGRAMLAMA* +
+[.center]
 image::https://github.com/fatihpir/FPGA_2017/raw/master/resim1.png[Giriş,height=128,weight=256]
+
+
+
+https://www.tutorialspoint.com/computer_programming/index.htm
