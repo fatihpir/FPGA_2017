@@ -2,3 +2,4 @@
 toc::[]
 
 = *FPGA TABANLI SİSTEM PROGRAMLAMA* +
+image::resim1.png[Giriş,height=128,weight=256]
