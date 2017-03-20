@@ -11,19 +11,19 @@ image::https://github.com/fatihpir/FPGA_2017/raw/master/resim63.png[Giriş,width
 == *Verilog Modül* +
 ** *Yarı Toplayıcı* +
 
-image::https://github.com/fatihpir/FPGA_2017/raw/master/ek1.png[Giriş,width=25%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/ek1.png[Giriş,width=50%]
 ** *Tam Toplayıcı* +
 
-image::https://github.com/fatihpir/FPGA_2017/raw/master/ek2.png[Giriş,width=25%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/ek2.png[Giriş,width=50%]
 ** *8 Bit Toplayıcı* 
 
 image::https://github.com/fatihpir/FPGA_2017/raw/master/resim64.png[Giriş,width=50%]
 ** *8 Bit İşaretli Sayı Çarpıcı* 
 
-image::https://github.com/fatihpir/FPGA_2017/raw/master/resim65.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim65.png[Giriş]
 == *Modül Tanımlama* +
 
-image::https://github.com/fatihpir/FPGA_2017/raw/master/resim66.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim66.png[Giriş,width=25%]
 
 [source,verilog]
 module or3(A, B, C, y);
@@ -36,4 +36,68 @@ module or3(A, B, C, y);
   or or2(y, w1, C);
 endmodule;
 
-image::https://github.com/fatihpir/FPGA_2017/raw/master/resim67.png[Giriş,width=50%]
+== *Modülleri Birbirine Bağlama* +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim66.png[Giriş,width=25%]
+
+[source,verilog]
+module or3(A, B, C, y);
+  input A;
+  input B;
+  input C;
+  output y;
+  wire w1;
+  or or1(w1, A, B);
+  or or2(y, w1, C);
+endmodule
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim67.png[Giriş,width=25%]
+
+** *Half adder*
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim68.png[Giriş,width=25%]
+[source,verilog]
+module half_adder(A, B, S, C);
+  input A;
+  input B;
+  output S;
+  output C;
+  xor xor1(S, A, B);
+  and and1(C, A, B);
+endmodule
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim69.png[Giriş,width=15%]
+** *Full adder* +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim70.png[Giriş,width=50%]
+[source,verilog]
+module full_adder(A, B, Cin, Cout, S);
+  input A, B, Cin;
+  output Cout, S;
+  wire w1, w2, w3;
+  half_adder ha1(.A(A), .B(B), .C(w1), .S(w2));
+  half_adder ha2(.A(w2), .B(Cin), .C(w3), .S(S));
+  or or1(Cout, w1, w3);
+endmodule
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim71.png[Giriş,width=25%]
+** *ÖDEV: 4 Bit adder* +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim72.png[Giriş,width=35%]
+
+== *HATIRLATMA: TKGate Kullanımı* +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim73.png[Giriş,width=48%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim74.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim75.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim76.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim77.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim78.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim79.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim80.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim81.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim82.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim83.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim84.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim85.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim86.png[Giriş,width=50%]
