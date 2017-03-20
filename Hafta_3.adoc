@@ -1,0 +1,69 @@
+:toc: macro
+toc::[]
+
+= *FPGA TABANLI SİSTEM TASARIMI* +
+[.right]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim31.png[Giriş,width=50%] 
+
+== *Söz Dizilimi* +
+[source,verilog]
+/* 
+		Verilog HDL dilindeki söz dilimini anlatır.
+*/
+input giris;		 // giriş olarak kullanılır
+output cikis;		// çıkış olarak kullanılır
+/* 
+		B (Büyük B) 
+		b (kücük b)
+*/
+B =! b;
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim32.png[Giriş,width=25%]
+== *Sanal Makine Dosyası* +
+https://github.com/KOU-Embedded-System-Lab/os-base-image/releases/download/v20160217/xubuntu-kouembedded-v20160217.ova[xubuntu-kouembedded-v20160217.ova]
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim33.png[Giriş,width=50%,height:50%]
+== *VirtualBox’un Çalıştırılması* +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim34.png[Giriş,width=50%,height:50%]
+== *Derse Ait Sanal Makinenin Aktarılması* +
+** Dosya menüsünden *“Cihazı içe aktar”*
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim35.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim36.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim38.png[Giriş,width=50%,height:50%]
+== *Derse Ait Sanal Makinenin Özellikleri* +
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim37.png[Giriş,width=50%,height:50%]
+
+== *Derse Ait Sanal Makinenin Çalıştırılması* +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim39.png[Giriş,width=50%,height:50%]
+== *Derse Ait Sanal Makinenin Kullanımı* +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim40.png[Giriş,width=50%,height:50%]
+== *Derse Yönelik Program Kurulumu* +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim41.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim42.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim43.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim44.png[Giriş,width=50%,height:50%]
+
+== *Derse Yönelik Program Açılması* +
+
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim45.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim46.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim47.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim48.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim49.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim50.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim51.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim52.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim53.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim54.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim55.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim56.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim57.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim58.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim59.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim60.png[Giriş,width=50%,height:50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim61.png[Giriş,width=50%,height:50%]
