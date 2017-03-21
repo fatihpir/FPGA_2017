@@ -11,16 +11,16 @@ image::https://github.com/fatihpir/FPGA_2017/raw/master/resim63.png[Giriş,width
 == *Verilog Modül* +
 ** *Yarı Toplayıcı* +
 
-image::https://github.com/fatihpir/FPGA_2017/raw/master/ek1.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/ek1.png[Giriş,width=25%]
 ** *Tam Toplayıcı* +
 
-image::https://github.com/fatihpir/FPGA_2017/raw/master/ek2.png[Giriş,width=50%]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/ek2.png[Giriş,width=25%]
 ** *8 Bit Toplayıcı* 
 
 image::https://github.com/fatihpir/FPGA_2017/raw/master/resim64.png[Giriş,width=50%]
 ** *8 Bit İşaretli Sayı Çarpıcı* 
 
-image::https://github.com/fatihpir/FPGA_2017/raw/master/resim65.png[Giriş]
+image::https://github.com/fatihpir/FPGA_2017/raw/master/resim65.png[Giriş,width=50%]
 == *Modül Tanımlama* +
 
 image::https://github.com/fatihpir/FPGA_2017/raw/master/resim66.png[Giriş,width=25%]
